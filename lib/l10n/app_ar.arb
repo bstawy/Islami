@@ -1,0 +1,18 @@
+{
+    "islami" : "إسلامي",
+    "quran" : "القرآن",
+    "suraName" : "اسم السورة",
+    "suraNumber" : "رقم السورة",
+    "hadeth" : "الأحاديث",
+    "tasbeh" : "التسبيح",
+    "numberOfTasbeh" : "عدد التسبيحات",
+    "radio" : "الراديو",
+    "quranRadioStation" : "إذاعة القرآن الكريم",
+    "settings" : "الإعدادات",
+    "language" : "اللغة",
+    "english" : "الإنجليزية",
+    "arabic" : "العربية",
+    "theme" : "النمط",
+    "light" : "نهاري",
+    "dark" : "ليلي"
+}
