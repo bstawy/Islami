@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'core/theme/application_theme.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -16,6 +18,11 @@ class MyApp extends StatelessWidget {
       // Specify delegates and supported languages
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
+
+      themeMode: ThemeMode.light,
+      theme: ApplicationTheme.lightTheme,
+      darkTheme: ApplicationTheme.darkTheme,
+
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Islami'),
