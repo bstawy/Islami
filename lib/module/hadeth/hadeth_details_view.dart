@@ -54,8 +54,7 @@ class HadethDetailsView extends StatelessWidget {
                 style: theme.textTheme.titleMedium,
                 textAlign: TextAlign.center,
               ),
-              Divider(
-                color: theme.colorScheme.primary,
+              const Divider(
                 indent: 25,
                 endIndent: 25,
                 height: 0,

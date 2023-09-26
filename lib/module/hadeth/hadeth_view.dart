@@ -33,7 +33,6 @@ class _HadethViewState extends State<HadethView> {
         ),
         SizedBox(height: mediaQuery.height * 0.01),
         Divider(
-          color: theme.colorScheme.primary,
           indent: 10,
           endIndent: 10,
           height: 0,
@@ -48,7 +47,6 @@ class _HadethViewState extends State<HadethView> {
           ),
         ),
         Divider(
-          color: theme.colorScheme.primary,
           indent: 10,
           endIndent: 10,
           height: 0,
@@ -68,7 +66,6 @@ class _HadethViewState extends State<HadethView> {
               ),
             ),
             separatorBuilder: (context, index) => Divider(
-              color: theme.colorScheme.primary,
               indent: 75,
               endIndent: 75,
               height: 10,

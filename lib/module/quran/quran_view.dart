@@ -142,7 +142,6 @@ class QuranView extends StatelessWidget {
         ),
         SizedBox(height: mediaQuery.height * 0.01),
         Divider(
-          color: theme.colorScheme.primary,
           indent: 10,
           endIndent: 10,
           height: 0,
@@ -160,7 +159,7 @@ class QuranView extends StatelessWidget {
             Container(
               width: 2,
               height: mediaQuery.height * 0.056,
-              color: theme.colorScheme.primary,
+              color: theme.colorScheme.onSecondary,
             ),
             Expanded(
               child: Text(
@@ -172,7 +171,6 @@ class QuranView extends StatelessWidget {
           ],
         ),
         Divider(
-          color: theme.colorScheme.primary,
           indent: 10,
           endIndent: 10,
           height: 0,

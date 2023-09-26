@@ -76,7 +76,6 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
                 ],
               ),
               Divider(
-                color: theme.colorScheme.primary,
                 indent: 25,
                 endIndent: 25,
                 height: 0,
@@ -87,7 +86,7 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
                 child: ListView.builder(
                   itemCount: suraVerses.length,
                   itemBuilder: (context, index) => Text(
-                    '(${index+1}) ${suraVerses[index]}',
+                    '(${index + 1}) ${suraVerses[index]}',
                     style: theme.textTheme.bodyMedium,
                     textAlign: TextAlign.center,
                   ),
