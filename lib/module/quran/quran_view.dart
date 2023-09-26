@@ -134,7 +134,12 @@ class QuranView extends StatelessWidget {
 
     return Column(
       children: [
-        Image.asset('assets/images/quran_header.png'),
+        Image.asset(
+          'assets/images/quran_header.png',
+          width: mediaQuery.width/2,
+          height: mediaQuery.height/3.8,
+          fit: BoxFit.cover,
+        ),
         SizedBox(height: mediaQuery.height * 0.01),
         Divider(
           color: theme.colorScheme.primary,
