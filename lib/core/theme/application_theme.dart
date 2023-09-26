@@ -8,7 +8,7 @@ class ApplicationTheme{
       seedColor: const Color(0xffB7935F),
       primary: const Color(0xffB7935F),
       secondary: const Color(0xffF8F8F8),
-      onSecondary: const Color(0xff242424),
+      onSecondary: const Color(0xffB7935F),
     ),
 
     appBarTheme: const AppBarTheme(
@@ -91,7 +91,7 @@ class ApplicationTheme{
     colorScheme: ColorScheme.fromSeed(
       seedColor: const Color(0xff141A2E),
       primary: const Color(0xff141A2E),
-      secondary: const Color(0xffF8F8F8),
+      secondary: const Color(0xff141A2E),
       onSecondary: const Color(0xffFACC1D),
     ),
 
@@ -138,32 +138,33 @@ class ApplicationTheme{
 
     textTheme: const TextTheme(
       titleLarge: TextStyle(
-        color: Color(0xff242424),
+        color: Color(0xffF8F8F8),
         fontFamily: 'ElMessiri',
         fontSize: 25,
         fontWeight: FontWeight.bold,
       ),
 
       titleMedium: TextStyle(
-        color: Color(0xff242424),
+        color: Color(0xffF8F8F8),
         fontFamily: 'Inter',
         fontSize: 25,
         fontWeight: FontWeight.normal,
       ),
 
       bodyLarge: TextStyle(
-        color: Color(0xff242424),
+        color: Color(0xffF8F8F8),
         fontFamily: 'Inter',
         fontSize: 20,
         fontWeight: FontWeight.normal,
       ),
 
       bodyMedium: TextStyle(
-        color: Color(0xff242424),
+        color: Color(0xffF8F8F8),
         fontFamily: 'DecoType',
         fontSize: 20,
         fontWeight: FontWeight.normal,
       ),
     ),
+    dividerColor: const Color(0xffFACC1D),
   );
 }
