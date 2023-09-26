@@ -14,5 +14,6 @@
     "arabic" : "Arabic",
     "theme" : "Theme",
     "light" : "Light",
-    "dark" : "Dark"
+    "dark" : "Dark",
+    "reset" : "Reset",
 }
