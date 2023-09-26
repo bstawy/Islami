@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/layout/home_layout.dart';
+import 'package:islami/module/quran/quran_details_view.dart';
 
 import 'core/theme/application_theme.dart';
 void main() {
@@ -8,7 +9,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  static String currentLanguage = 'ar' , currentMode = 'light';
+  static String currentLanguage = 'en' , currentMode = 'light';
 
   const MyApp({super.key});
 
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeLayout.routeName,
       routes: {
         HomeLayout.routeName : (context) => const HomeLayout(),
+        QuranDetailsView.routeName : (context) => const QuranDetailsView(),
       },
     );
   }
