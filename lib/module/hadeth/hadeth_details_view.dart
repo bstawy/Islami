@@ -61,7 +61,7 @@ class HadethDetailsView extends StatelessWidget {
                 height: 0,
                 thickness: 2,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Expanded(
                 child: ListView.builder(
                   itemCount: hadethContent.length,
