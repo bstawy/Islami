@@ -39,6 +39,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/files/quran/
 
   fonts:
     - family: ElMessiri
@@ -48,3 +49,7 @@ flutter:
     - family: Inter
       fonts:
         - asset: fonts/Inter-Regular.ttf
+
+    - family: DecoType
+      fonts:
+        - asset: fonts/DTHULUTH.ttf
