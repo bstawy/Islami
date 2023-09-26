@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'core/theme/application_theme.dart';
 import 'package:islami/layout/home_layout.dart';
 import 'package:islami/module/quran/quran_details_view.dart';
+import 'module/hadeth/hadeth_details_view.dart';
 
-import 'core/theme/application_theme.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeLayout.routeName : (context) => const HomeLayout(),
         QuranDetailsView.routeName : (context) => const QuranDetailsView(),
+        HadethDetailsView.routeName : (context) => HadethDetailsView(),
       },
     );
   }
