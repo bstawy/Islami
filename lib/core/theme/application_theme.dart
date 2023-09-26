@@ -39,6 +39,12 @@ class ApplicationTheme{
         size: 32
       ),
       selectedItemColor: Color(0xff242424),
+      selectedLabelStyle: TextStyle(
+        color: Color(0xff242424),
+        fontFamily: 'Inter',
+        fontSize: 12,
+        fontWeight: FontWeight.normal,
+      ),
       unselectedIconTheme: IconThemeData(
         color: Color(0xffF8F8F8),
         size: 28,
@@ -47,31 +53,31 @@ class ApplicationTheme{
     ),
 
     textTheme: const TextTheme(
-      titleMedium: TextStyle(
+      titleLarge: TextStyle(
         color: Color(0xff242424),
         fontFamily: 'ElMessiri',
         fontSize: 25,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.bold,
       ),
 
-      bodyLarge: TextStyle(
+      titleMedium: TextStyle(
         color: Color(0xff242424),
         fontFamily: 'Inter',
         fontSize: 25,
         fontWeight: FontWeight.normal,
       ),
 
-      bodyMedium: TextStyle(
+      bodyLarge: TextStyle(
         color: Color(0xff242424),
         fontFamily: 'Inter',
         fontSize: 20,
         fontWeight: FontWeight.normal,
       ),
 
-      bodySmall: TextStyle(
+      bodyMedium: TextStyle(
         color: Color(0xff242424),
-        fontFamily: 'Inter',
-        fontSize: 12,
+        fontFamily: 'DecoType',
+        fontSize: 20,
         fontWeight: FontWeight.normal,
       ),
     ),
@@ -117,6 +123,12 @@ class ApplicationTheme{
           size: 32
       ),
       selectedItemColor: Color(0xffFACC1D),
+      selectedLabelStyle: TextStyle(
+        color: Color(0xffFACC1D),
+        fontFamily: 'Inter',
+        fontSize: 12,
+        fontWeight: FontWeight.normal,
+      ),
       unselectedIconTheme: IconThemeData(
         color: Color(0xffF8F8F8),
         size: 28,
@@ -125,31 +137,31 @@ class ApplicationTheme{
     ),
 
     textTheme: const TextTheme(
-      titleMedium: TextStyle(
-        color: Color(0xffF8F8F8),
+      titleLarge: TextStyle(
+        color: Color(0xff242424),
         fontFamily: 'ElMessiri',
         fontSize: 25,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.bold,
       ),
 
-      bodyLarge: TextStyle(
-        color: Color(0xffF8F8F8),
+      titleMedium: TextStyle(
+        color: Color(0xff242424),
         fontFamily: 'Inter',
         fontSize: 25,
         fontWeight: FontWeight.normal,
       ),
 
-      bodyMedium: TextStyle(
-        color: Color(0xffF8F8F8),
+      bodyLarge: TextStyle(
+        color: Color(0xff242424),
         fontFamily: 'Inter',
         fontSize: 20,
         fontWeight: FontWeight.normal,
       ),
 
-      bodySmall: TextStyle(
-        color: Color(0xffF8F8F8),
-        fontFamily: 'Inter',
-        fontSize: 12,
+      bodyMedium: TextStyle(
+        color: Color(0xff242424),
+        fontFamily: 'DecoType',
+        fontSize: 20,
         fontWeight: FontWeight.normal,
       ),
     ),
