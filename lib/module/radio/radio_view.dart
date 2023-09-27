@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/main.dart';
+import 'package:islami/core/theme/application_theme.dart';
+import 'package:provider/provider.dart';
+
+import '../../core/provider/app_provider.dart';
 
 class RadioView extends StatefulWidget {
   const RadioView({super.key});
@@ -17,6 +20,7 @@ class _RadioViewState extends State<RadioView> {
     var locale = AppLocalizations.of(context)!;
     var theme = Theme.of(context);
     var mediaQuery = MediaQuery.of(context).size;
+    var appProvider = Provider.of<AppProvider>(context);
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -35,12 +39,12 @@ class _RadioViewState extends State<RadioView> {
               child: GestureDetector(
                 onTap: () {},
                 child: ImageIcon(
-                  AssetImage((MyApp.currentLanguage == 'en')
+                  AssetImage((appProvider.currentLocal == 'en')
                       ? 'assets/images/previous_icon.png'
                       : 'assets/images/next_icon.png'),
-                  color: (MyApp.currentMode == 'light')
-                      ? theme.colorScheme.primary
-                      : theme.colorScheme.onSecondary,
+                  color: (ApplicationTheme.isDark)
+                      ? theme.colorScheme.onSecondary
+                      : theme.colorScheme.primary,
                 ),
               ),
             ),
@@ -57,9 +61,9 @@ class _RadioViewState extends State<RadioView> {
                   AssetImage((_currentState == 'pause')
                       ? 'assets/images/play_icon.png'
                       : 'assets/images/pause_icon.png'),
-                  color: (MyApp.currentMode == 'light')
-                      ? theme.colorScheme.primary
-                      : theme.colorScheme.onSecondary,
+                  color: (appProvider.isDark())
+                      ? theme.colorScheme.onSecondary
+                      : theme.colorScheme.primary,
                   size: 30,
                 ),
               ),
@@ -68,12 +72,12 @@ class _RadioViewState extends State<RadioView> {
               child: GestureDetector(
                 onTap: () {},
                 child: ImageIcon(
-                  AssetImage((MyApp.currentLanguage == 'en')
+                  AssetImage((appProvider.currentLocal == 'en')
                       ? 'assets/images/next_icon.png'
                       : 'assets/images/previous_icon.png'),
-                  color: (MyApp.currentMode == 'light')
-                      ? theme.colorScheme.primary
-                      : theme.colorScheme.onSecondary,
+                  color: (ApplicationTheme.isDark)
+                      ? theme.colorScheme.onSecondary
+                      : theme.colorScheme.primary,
                 ),
               ),
             ),
