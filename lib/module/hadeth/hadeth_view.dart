@@ -32,7 +32,7 @@ class _HadethViewState extends State<HadethView> {
           fit: BoxFit.cover,
         ),
         SizedBox(height: mediaQuery.height * 0.01),
-        Divider(
+        const Divider(
           indent: 10,
           endIndent: 10,
           height: 0,
@@ -46,7 +46,7 @@ class _HadethViewState extends State<HadethView> {
             textAlign: TextAlign.center,
           ),
         ),
-        Divider(
+        const Divider(
           indent: 10,
           endIndent: 10,
           height: 0,
@@ -65,7 +65,7 @@ class _HadethViewState extends State<HadethView> {
                 textAlign: TextAlign.center,
               ),
             ),
-            separatorBuilder: (context, index) => Divider(
+            separatorBuilder: (context, index) => const Divider(
               indent: 75,
               endIndent: 75,
               height: 10,

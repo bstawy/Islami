@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/module/hadeth/hadeth_view.dart';
-import '../../main.dart';
+import 'package:provider/provider.dart';
+import '../../core/provider/app_provider.dart';
 
 class HadethDetailsView extends StatelessWidget {
   static const String routeName = 'hadeth-details-view';
@@ -19,6 +20,7 @@ class HadethDetailsView extends StatelessWidget {
     var mediaQuery = MediaQuery.of(context).size;
     var theme = Theme.of(context);
     var locale = AppLocalizations.of(context)!;
+    var appProvider = Provider.of<AppProvider>(context);
 
     getHadethContent(args.content);
 
@@ -26,9 +28,7 @@ class HadethDetailsView extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-            (MyApp.currentMode == 'light')
-                ? 'assets/images/background.png'
-                : 'assets/images/background_dark.png',
+            appProvider.backgroundImage(),
           ),
           fit: BoxFit.cover,
         ),
