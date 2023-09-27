@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/main.dart';
+import 'package:provider/provider.dart';
+
+import '../../core/provider/app_provider.dart';
 
 class TasbehView extends StatefulWidget {
   const TasbehView({super.key});
@@ -20,6 +22,7 @@ class _TasbehViewState extends State<TasbehView> {
     var mediaQuery = MediaQuery.of(context).size;
     var locale = AppLocalizations.of(context)!;
     var theme = Theme.of(context);
+    var appProvider = Provider.of<AppProvider>(context);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -28,17 +31,17 @@ class _TasbehViewState extends State<TasbehView> {
           alignment: Alignment.topCenter,
           children: [
             Container(
-              margin: EdgeInsets.only(left: 40),
+              margin: const EdgeInsets.only(left: 40),
               child: Image.asset(
-                (MyApp.currentMode == 'light')
-                    ? 'assets/images/sebha_head_header.png'
-                    : 'assets/images/sebha_head_header_dark.png',
+                appProvider.isDark()
+                    ? 'assets/images/sebha_head_header_dark.png'
+                    : 'assets/images/sebha_head_header.png',
                 width: mediaQuery.width / 5.64,
                 height: mediaQuery.height / 8.285,
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 75),
+              margin: const EdgeInsets.only(top: 72),
               child: Transform.rotate(
                 angle: _angle,
                 child: GestureDetector(
@@ -57,9 +60,9 @@ class _TasbehViewState extends State<TasbehView> {
                     });
                   },
                   child: Image.asset(
-                    (MyApp.currentMode == 'light')
-                        ? 'assets/images/sebha_body_header.png'
-                        : 'assets/images/sebha_body_header_dark.png',
+                    appProvider.isDark()
+                        ? 'assets/images/sebha_body_header_dark.png'
+                        : 'assets/images/sebha_body_header.png',
                     width: mediaQuery.width / 1.776,
                     height: mediaQuery.height / 3.718,
                   ),
@@ -75,7 +78,7 @@ class _TasbehViewState extends State<TasbehView> {
           textAlign: TextAlign.center,
         ),
         Container(
-          margin: EdgeInsets.symmetric(vertical: 24, horizontal: 170),
+          margin: const EdgeInsets.symmetric(vertical: 24, horizontal: 170),
           alignment: Alignment.center,
           width: mediaQuery.width / 5.88,
           height: mediaQuery.height / 10.115,
@@ -89,7 +92,7 @@ class _TasbehViewState extends State<TasbehView> {
           ),
         ),
         Container(
-          margin: EdgeInsets.symmetric(horizontal: 120),
+          margin: const EdgeInsets.symmetric(horizontal: 90),
           child: OutlinedButton(
             onPressed: () {
               if (_currentZker == 2) {
@@ -125,7 +128,7 @@ class _TasbehViewState extends State<TasbehView> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(top: 20, left: 145, right: 145, bottom: 5),
+          margin: const EdgeInsets.only(top: 20, left: 135, right: 135, bottom: 5),
           child: OutlinedButton(
             onPressed: () {
               setState(() {
