@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami/core/theme/application_theme.dart';
 import 'package:islami/module/quran/quran_view.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
+import '../../core/provider/app_provider.dart';
 import '../../main.dart';
 
 class QuranDetailsView extends StatefulWidget {
@@ -20,9 +23,9 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
   @override
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)?.settings.arguments as SuraData;
-    var mediaQuery = MediaQuery.of(context).size;
     var theme = Theme.of(context);
     var locale = AppLocalizations.of(context)!;
+    var appProvider = Provider.of<AppProvider>(context);
 
     if (content.isEmpty) {
       readFile(args.suraNumber);
@@ -31,9 +34,7 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-            (MyApp.currentMode == 'light')
-                ? 'assets/images/background.png'
-                : 'assets/images/background_dark.png',
+            appProvider.backgroundImage(),
           ),
           fit: BoxFit.cover,
         ),
@@ -70,18 +71,26 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
                       setState(() {});
                     },
                     child: (audioState == 'pause')
-                        ? const Icon(Icons.play_circle, size: 30)
-                        : const Icon(Icons.pause_circle, size: 30),
+                        ? Icon(
+                            Icons.play_circle,
+                            size: 30,
+                            color: theme.colorScheme.onSecondary,
+                          )
+                        : Icon(
+                            Icons.pause_circle,
+                            size: 30,
+                            color: theme.colorScheme.onSecondary,
+                          ),
                   ),
                 ],
               ),
-              Divider(
+              const Divider(
                 indent: 25,
                 endIndent: 25,
                 height: 0,
                 thickness: 2,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Expanded(
                 child: ListView.builder(
                   itemCount: suraVerses.length,

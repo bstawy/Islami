@@ -141,7 +141,7 @@ class QuranView extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         SizedBox(height: mediaQuery.height * 0.01),
-        Divider(
+        const Divider(
           indent: 10,
           endIndent: 10,
           height: 0,
@@ -170,7 +170,7 @@ class QuranView extends StatelessWidget {
             ),
           ],
         ),
-        Divider(
+        const Divider(
           indent: 10,
           endIndent: 10,
           height: 0,
