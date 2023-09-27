@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islami/main.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/module/quran/quran_view.dart';
-
+import 'package:provider/provider.dart';
+import '../core/provider/app_provider.dart';
 import '../module/hadeth/hadeth_view.dart';
 import '../module/radio/radio_view.dart';
 import '../module/settings/settings_view.dart';
@@ -32,14 +32,13 @@ class _HomeLayoutState extends State<HomeLayout> {
   Widget build(BuildContext context) {
     var locale = AppLocalizations.of(context)!;
     var mediaQuery = MediaQuery.of(context).size;
+    var appProvider = Provider.of<AppProvider>(context);
 
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-            (MyApp.currentMode == 'light')
-                ? 'assets/images/background.png'
-                : 'assets/images/background_dark.png',
+            appProvider.backgroundImage(),
           ),
           fit: BoxFit.cover,
         ),
@@ -58,31 +57,31 @@ class _HomeLayoutState extends State<HomeLayout> {
           currentIndex: selectedIndex,
           items: [
             BottomNavigationBarItem(
-              icon: ImageIcon(
+              icon: const ImageIcon(
                 AssetImage('assets/images/quran_bottom_nav_icon.png'),
               ),
               label: locale.quran,
             ),
             BottomNavigationBarItem(
-              icon: ImageIcon(
+              icon: const ImageIcon(
                 AssetImage('assets/images/ahadeth_bottom_nav_icon.png'),
               ),
               label: locale.hadeth,
             ),
             BottomNavigationBarItem(
-              icon: ImageIcon(
+              icon: const ImageIcon(
                 AssetImage('assets/images/sebha_bottom_nav_icon.png'),
               ),
               label: locale.tasbeh,
             ),
             BottomNavigationBarItem(
-              icon: ImageIcon(
+              icon: const ImageIcon(
                 AssetImage('assets/images/radio_bottom_nav_icon.png'),
               ),
               label: locale.radio,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
+              icon: const Icon(Icons.settings),
               label: locale.settings,
             ),
           ],
