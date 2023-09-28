@@ -10,7 +10,8 @@ class SelectedOption extends StatelessWidget {
 
     return Container(
       margin: const EdgeInsets.only(top: 20, left: 20, right: 20, bottom: 10),
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      height: 50,
       decoration: BoxDecoration(
         color: Colors.white24,
         borderRadius: BorderRadius.circular(8),
@@ -21,7 +22,10 @@ class SelectedOption extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(selectedOptionTitle, style: theme.textTheme.titleMedium,),
+          Text(
+            selectedOptionTitle,
+            style: theme.textTheme.bodyLarge,
+          ),
           const Icon(Icons.check),
         ],
       ),
