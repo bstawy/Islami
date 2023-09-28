@@ -12,7 +12,7 @@ class SettingsItem extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     var theme = Theme.of(context);
     var mediaQuery = MediaQuery.of(context).size;
 
@@ -49,7 +49,10 @@ class SettingsItem extends StatelessWidget {
                     fontSize: 20,
                   ),
                 ),
-                const Icon(Icons.arrow_drop_down_outlined),
+                Icon(
+                  Icons.arrow_drop_down_outlined,
+                  color: theme.colorScheme.onSecondary,
+                ),
               ],
             ),
           ),
@@ -57,5 +60,4 @@ class SettingsItem extends StatelessWidget {
       ],
     );
   }
-
 }
