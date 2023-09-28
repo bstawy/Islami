@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/core/provider/app_provider.dart';
+import 'package:islami/module/splash/splash_view.dart';
 import 'package:provider/provider.dart';
 import 'core/theme/application_theme.dart';
 import 'package:islami/layout/home_layout.dart';
@@ -38,8 +39,9 @@ class MyApp extends StatelessWidget {
       theme: ApplicationTheme.lightTheme,
       darkTheme: ApplicationTheme.darkTheme,
 
-      initialRoute: HomeLayout.routeName,
+      initialRoute: SplashScreen.routeName,
       routes: {
+        SplashScreen.routeName: (context) => const SplashScreen(),
         HomeLayout.routeName: (context) => const HomeLayout(),
         QuranDetailsView.routeName: (context) => const QuranDetailsView(),
         HadethDetailsView.routeName: (context) => HadethDetailsView(),
