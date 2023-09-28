@@ -39,7 +39,8 @@ Islami application supports English and Arabic languages and Light and Dark mode
 
 &nbsp;
 
-![image](screenshots/QuranTab.gif)
+<img src="https://github.com/bstawy/Islami/blob/master/screenshots/QuranTab.gif" width="300" />
+<!-- ![image](screenshots/QuranTab.gif =250x250) -->
 
 &nbsp;
 
@@ -52,7 +53,8 @@ Islami application supports English and Arabic languages and Light and Dark mode
 
 &nbsp;
 
-![image](screenshots/HadethTab.gif)
+<img src="https://github.com/bstawy/Islami/blob/master/screenshots/HadethTab.gif" width="300" />
+<!-- ![image](screenshots/QuranTab.gif =250x250) -->
 
 &nbsp;
 
@@ -65,7 +67,8 @@ Islami application supports English and Arabic languages and Light and Dark mode
 
 &nbsp;
 
-![image](screenshots/TasbehTab.gif)
+<img src="https://github.com/bstawy/Islami/blob/master/screenshots/TasbehTab.gif" width="300" />
+<!-- ![image](screenshots/QuranTab.gif =250x250) -->
 
 &nbsp;
 
@@ -78,7 +81,8 @@ Islami application supports English and Arabic languages and Light and Dark mode
 
 &nbsp;
 
-![image](screenshots/RadioTab.gif)
+<img src="https://github.com/bstawy/Islami/blob/master/screenshots/RadioTab.gif" width="300" />
+<!-- ![image](screenshots/QuranTab.gif =250x250) -->
 
 &nbsp;
 
@@ -91,7 +95,8 @@ Islami application supports English and Arabic languages and Light and Dark mode
 
 &nbsp;
 
-![image](screenshots/SettingsTab.gif)
+<img src="https://github.com/bstawy/Islami/blob/master/screenshots/SettingsTab.gif" width="300" />
+<!-- ![image](screenshots/QuranTab.gif =250x250) -->
 
 &nbsp;
 
@@ -104,7 +109,8 @@ Islami application supports English and Arabic languages and Light and Dark mode
 
 &nbsp;
 
-![image](screenshots/LightMode.gif)
+<img src="https://github.com/bstawy/Islami/blob/master/screenshots/LightMode.gif" width="300" />
+<!-- ![image](screenshots/QuranTab.gif =250x250) -->
 
 &nbsp;
 
@@ -117,6 +123,7 @@ Islami application supports English and Arabic languages and Light and Dark mode
 
 &nbsp;
 
-![image](screenshots/ArabicLanguage.gif)
+<img src="https://github.com/bstawy/Islami/blob/master/screenshots/ArabicLanguage.gif" width="300" />
+<!-- ![image](screenshots/QuranTab.gif =250x250) -->
 
 &nbsp;
