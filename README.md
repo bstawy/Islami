@@ -1,7 +1,9 @@
 # Islami
-*Islami is a special phone app for Muslims.
-It helps you with your faith and makes it easy to learn about Islam. You can use it at home or anywhere you go, and it gives you lots of important Islamic stuff on your phone.*
-
+*"Islami" is a phone app made for Muslims. It helps you with your faith and makes practicing Islamic habits easier.*
+&nbsp;
+*This app was developed using the Flutter Framework and employs the "Provider" package for effective management of the application's state.*
+&nbsp;
+*Furthermore, "Islami" is available in both English and Arabic languages and also offers a Dark mode option for a comfortable user experience.*
 &nbsp;
 
 ## Languages and Technologies
