@@ -88,4 +88,35 @@ Islami application supports English and Arabic languages and Light and Dark mode
 **Settings page:**
 
 &nbsp; &nbsp; &nbsp; You can change application language and theme from here.
+
+&nbsp;
+
 ![image](screenshots/SettingsTab.gif)
+
+&nbsp;
+
+
+&nbsp;
+
+**Light & Dark modes:**
+
+&nbsp; &nbsp; &nbsp; You cah use application in both light and dark modes.
+
+&nbsp;
+
+![image](screenshots/LightMode.gif)
+
+&nbsp;
+
+
+&nbsp;
+
+**Multi language:**
+
+&nbsp; &nbsp; &nbsp; Application supports English and Arabic languages but only in tabs. Sura verses and hadeth content are in Arabic language.
+
+&nbsp;
+
+![image](screenshots/ArabicLanguage.gif)
+
+&nbsp;
