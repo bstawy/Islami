@@ -39,7 +39,8 @@ Islami application supports English and Arabic languages and Light and Dark mode
 
 &nbsp;
 
-![image](screenshots/QuranTab.gif =250x250)
+<img src="https://github.com/bstawy/Islami/blob/master/screenshots/QuranTab.gif" width="300" />
+<!-- ![image](screenshots/QuranTab.gif =250x250) -->
 
 &nbsp;
 
