@@ -51,7 +51,7 @@ class _TasbehViewState extends State<TasbehView> {
                         _angle = 2 * 3.14;
                         _zkerCounter = 0;
                         (_currentZker == 2)
-                            ? _currentZker == 0
+                            ? _currentZker = 0
                             : _currentZker++;
                       }
 
