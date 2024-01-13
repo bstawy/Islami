@@ -4,6 +4,7 @@ import 'package:islami/module/hadeth/hadeth_view.dart';
 import 'package:provider/provider.dart';
 import '../../core/provider/app_provider.dart';
 
+// ignore: must_be_immutable
 class HadethDetailsView extends StatelessWidget {
   static const String routeName = 'hadeth-details-view';
   List<String> hadethContent = const [];
@@ -17,7 +18,6 @@ class HadethDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)?.settings.arguments as HadethData;
-    var mediaQuery = MediaQuery.of(context).size;
     var theme = Theme.of(context);
     var locale = AppLocalizations.of(context)!;
     var appProvider = Provider.of<AppProvider>(context);

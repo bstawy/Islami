@@ -71,8 +71,8 @@ class ApplicationTheme {
     ),
     dividerColor: const Color(0xffB7935F),
 
-    bottomSheetTheme: BottomSheetThemeData(
-      backgroundColor: const Color(0xffB7935F),
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: Color(0xffB7935F),
     ),
   );
 
@@ -143,7 +143,7 @@ class ApplicationTheme {
       ),
     ),
     dividerColor: const Color(0xffFACC1D),
-    bottomSheetTheme: BottomSheetThemeData(
+    bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: Color(0xff141A2E),
     ),
   );

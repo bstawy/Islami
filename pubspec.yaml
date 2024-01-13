@@ -14,24 +14,16 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  flutter_native_splash: ^2.3.2
+  flutter_native_splash: ^2.3.9
   flutter_localizations:
     sdk: flutter
   intl: any
   provider: ^6.0.5
 
-flutter_native_splash:
-  background_image: "assets/images/splash_screen.png"
-  background_image_dark: "assets/images/splash_screen_dark.png"
-
-  android_12:
-  image: assets/images/splash_screen.png
-  image_dark: assets/images/splash_screen_dark.png
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^2.0.0
 
 flutter:

@@ -31,7 +31,6 @@ class _HomeLayoutState extends State<HomeLayout> {
   @override
   Widget build(BuildContext context) {
     var locale = AppLocalizations.of(context)!;
-    var mediaQuery = MediaQuery.of(context).size;
     var appProvider = Provider.of<AppProvider>(context);
 
     return Container(

@@ -43,7 +43,6 @@ class _SettingsViewState extends State<SettingsView> {
     );
   }
   void showLanguageBottomSheet(context) {
-    var theme = Theme.of(context);
 
     showModalBottomSheet(
       context: context,
@@ -52,7 +51,6 @@ class _SettingsViewState extends State<SettingsView> {
   }
 
   void showThemeBottomSheet(context) {
-    var theme = Theme.of(context);
 
     showModalBottomSheet(
       context: context,
