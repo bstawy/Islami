@@ -130,3 +130,9 @@ Islami application supports English and Arabic languages and Light and Dark mode
 <!-- ![image](screenshots/QuranTab.gif =250x250) -->
 
 &nbsp;
+
+<img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=bstawy&show_icons=true&locale=en&layout=compact&theme=radical" alt="most used languages" />
+<br>
+<a href="https://komarev.com/ghpvc/?username=bstawy&style=for-the-badge">
+    <img src="https://komarev.com/ghpvc/?username=bstawy&style=for-the-badge">
+</a>

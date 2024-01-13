@@ -46,12 +46,12 @@ flutter:
   fonts:
     - family: ElMessiri
       fonts:
-        - asset: fonts/ElMessiri-Regular.ttf
+        - asset: assets/fonts/ElMessiri-Regular.ttf
 
     - family: Inter
       fonts:
-        - asset: fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Regular.ttf
 
     - family: DecoType
       fonts:
-        - asset: fonts/DTHULUTH.ttf
+        - asset: assets/fonts/DTHULUTH.ttf
