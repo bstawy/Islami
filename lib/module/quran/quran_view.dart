@@ -129,9 +129,6 @@ class QuranView extends StatelessWidget {
     var locale = AppLocalizations.of(context)!;
     var theme = Theme.of(context);
 
-    print('height = ${mediaQuery.height}');
-    print('width = ${mediaQuery.width}');
-
     return Column(
       children: [
         Image.asset(

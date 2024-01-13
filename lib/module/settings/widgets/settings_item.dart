@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class SettingsItem extends StatelessWidget {
   final String settingOptionTitle, selectedOption;
   GestureTapCallback onClicked;

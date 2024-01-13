@@ -16,11 +16,10 @@ class LanguageBottomSheetWidget extends StatefulWidget {
 class _LanguageBottomSheetWidgetState extends State<LanguageBottomSheetWidget> {
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
     var locale = AppLocalizations.of(context)!;
     var appProvider = Provider.of<AppProvider>(context);
 
-    return Container(
+    return SizedBox(
       height: 350,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

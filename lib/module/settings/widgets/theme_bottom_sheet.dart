@@ -18,7 +18,7 @@ class _ThemeBottomSheetWidgetState extends State<ThemeBottomSheetWidget> {
     var locale = AppLocalizations.of(context)!;
     var appProvider = Provider.of<AppProvider>(context);
 
-    return Container(
+    return SizedBox(
       height: 350,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
