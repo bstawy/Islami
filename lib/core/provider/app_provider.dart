@@ -6,8 +6,7 @@ class AppProvider extends ChangeNotifier {
   late String currentLocal ;
   late ThemeMode currentTheme;
 
-  AppProvider(){
-    prefs = getInstance() as SharedPreferences;
+  AppProvider(this.prefs){
     currentLocal = prefs.getString('currentLocal') ?? 'ar';
     currentTheme = isDark() ? ThemeMode.dark : ThemeMode.light;
   }
