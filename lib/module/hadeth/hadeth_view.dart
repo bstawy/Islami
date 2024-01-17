@@ -32,11 +32,12 @@ class _HadethViewState extends State<HadethView> {
           fit: BoxFit.cover,
         ),
         SizedBox(height: mediaQuery.height * 0.01),
-        const Divider(
+        Divider(
           indent: 10,
           endIndent: 10,
           height: 0,
           thickness: 2,
+          color: theme.colorScheme.onSecondary,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 5.5),
@@ -46,11 +47,12 @@ class _HadethViewState extends State<HadethView> {
             textAlign: TextAlign.center,
           ),
         ),
-        const Divider(
+        Divider(
           indent: 10,
           endIndent: 10,
           height: 0,
           thickness: 2,
+          color: theme.colorScheme.onSecondary,
         ),
         Expanded(
           child: ListView.separated(
@@ -65,11 +67,12 @@ class _HadethViewState extends State<HadethView> {
                 textAlign: TextAlign.center,
               ),
             ),
-            separatorBuilder: (context, index) => const Divider(
+            separatorBuilder: (context, index) => Divider(
               indent: 75,
               endIndent: 75,
               height: 10,
               thickness: 1.2,
+              color: theme.colorScheme.onSecondary,
             ),
             itemCount: allHadethContent.length,
           ),

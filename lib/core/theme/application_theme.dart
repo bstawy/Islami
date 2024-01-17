@@ -69,7 +69,6 @@ class ApplicationTheme {
         fontWeight: FontWeight.normal,
       ),
     ),
-    dividerColor: const Color(0xffB7935F),
 
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: Color(0xffB7935F),
@@ -142,7 +141,6 @@ class ApplicationTheme {
         fontWeight: FontWeight.normal,
       ),
     ),
-    dividerColor: const Color(0xffFACC1D),
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: Color(0xff141A2E),
     ),

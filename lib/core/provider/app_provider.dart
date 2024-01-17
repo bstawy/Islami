@@ -1,15 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AppProvider extends ChangeNotifier {
-  String currentLocal = 'en';
+  late final SharedPreferences prefs;
+  late String currentLocal ;
+  late ThemeMode currentTheme;
 
-  ThemeMode currentTheme = ThemeMode.dark;
+  AppProvider(this.prefs){
+    currentLocal = prefs.getString('currentLocal') ?? 'ar';
+    currentTheme = isDark() ? ThemeMode.dark : ThemeMode.light;
+  }
+
+  bool isDark() => prefs.getBool('isDark') ?? false;
+
+  Future<SharedPreferences> getInstance() async {
+    final Future<SharedPreferences> prefs = SharedPreferences.getInstance();
+    return await prefs;
+  }
 
   changeTheme(ThemeMode newTheme) {
     if (currentTheme == newTheme) {
       return;
     }
     currentTheme = newTheme;
+    prefs.setBool('isDark', currentTheme == ThemeMode.light ? false : true);
 
     notifyListeners();
   }
@@ -19,11 +33,10 @@ class AppProvider extends ChangeNotifier {
       return;
     }
     currentLocal = newLanguage;
+    prefs.setString('currentLocal', currentLocal);
 
     notifyListeners();
   }
-
-  bool isDark() => currentTheme == ThemeMode.dark;
 
   String backgroundImage() {
     return isDark()
