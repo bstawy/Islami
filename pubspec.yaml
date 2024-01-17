@@ -2,7 +2,7 @@ name: islami
 
 description: Islami is a special phone app for Muslims. It helps you with your faith and makes it easy to learn about Islam. You can use it at home or anywhere you go, and it gives you lots of important Islamic stuff on your phone.
 
-publish_to:
+publish_to: 'null'
 
 version: 1.0.0+1
 
