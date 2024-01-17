@@ -128,7 +128,7 @@ class _TasbehViewState extends State<TasbehView> {
           ),
         ),
         Container(
-          margin: const EdgeInsets.only(top: 20, left: 135, right: 135, bottom: 5),
+          margin: EdgeInsets.only(top: 20, left: mediaQuery.width/3, right: mediaQuery.width/3, bottom: 5),
           child: OutlinedButton(
             onPressed: () {
               setState(() {
