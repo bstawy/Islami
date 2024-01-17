@@ -138,11 +138,12 @@ class QuranView extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         SizedBox(height: mediaQuery.height * 0.01),
-        const Divider(
+        Divider(
           indent: 10,
           endIndent: 10,
           height: 0,
           thickness: 2,
+          color: theme.colorScheme.onSecondary,
         ),
         Row(
           children: [
@@ -167,11 +168,12 @@ class QuranView extends StatelessWidget {
             ),
           ],
         ),
-        const Divider(
+        Divider(
           indent: 10,
           endIndent: 10,
           height: 0,
           thickness: 2,
+          color: theme.colorScheme.onSecondary,
         ),
         Expanded(
           child: ListView.builder(
