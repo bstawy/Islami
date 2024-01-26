@@ -1,9 +1,12 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/core/theme/application_theme.dart';
+import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 
 import '../../core/provider/app_provider.dart';
+import 'radios_response.dart';
+import 'widgets/radio_item.dart';
 
 class RadioView extends StatefulWidget {
   const RadioView({super.key});
@@ -13,75 +16,56 @@ class RadioView extends StatefulWidget {
 }
 
 class _RadioViewState extends State<RadioView> {
-  String _currentState = 'pause';
+  Future<RadiosResponse> getRadios(String currentLanguage) async {
+    currentLanguage = (currentLanguage == 'en') ? 'eng' : 'ar';
+    var uri = Uri.parse(
+        "https://mp3quran.net/api/v3/radios?language=$currentLanguage");
+    var response = await http.get(uri);
+    if (response.statusCode == 200) {
+      var result = json.decode(response.body);
+      return RadiosResponse.fromJson(result);
+    } else {
+      throw Exception('Failed to load radios');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    var locale = AppLocalizations.of(context)!;
     var theme = Theme.of(context);
     var mediaQuery = MediaQuery.of(context).size;
     var appProvider = Provider.of<AppProvider>(context);
 
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        SizedBox(height: mediaQuery.height / 6),
         Image.asset('assets/images/radio_header.png'),
-        SizedBox(height: mediaQuery.height / 15.26),
-        Text(
-          locale.quranRadioStation,
-          style: theme.textTheme.titleLarge,
-        ),
-        SizedBox(height: mediaQuery.height / 15.26),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              child: GestureDetector(
-                onTap: () {},
-                child: ImageIcon(
-                  AssetImage((appProvider.currentLocal == 'en')
-                      ? 'assets/images/previous_icon.png'
-                      : 'assets/images/next_icon.png'),
-                  color: (ApplicationTheme.isDark)
-                      ? theme.colorScheme.onSecondary
-                      : theme.colorScheme.primary,
+        const SizedBox(height: 60),
+        FutureBuilder<RadiosResponse>(
+          future: getRadios(appProvider.currentLocal),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              return Expanded(
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.zero,
+                  physics: const PageScrollPhysics(),
+                  itemCount: snapshot.data!.radios!.length,
+                  itemBuilder: (context, index) {
+                    return RadioItem(
+                      radioStation: snapshot.data!.radios![index],
+                    );
+                  },
                 ),
+              );
+            } else if (snapshot.hasError) {
+              return Text('${snapshot.error}');
+            }
+            return Center(
+              child: CircularProgressIndicator(
+                color: theme.colorScheme.onSecondary,
               ),
-            ),
-            Expanded(
-              child: GestureDetector(
-                onTap: () {
-                  _currentState = (_currentState == 'pause')
-                      ? 'play'
-                      : 'pause';
-                  setState(() {
-                  });
-                },
-                child: ImageIcon(
-                  AssetImage((_currentState == 'pause')
-                      ? 'assets/images/play_icon.png'
-                      : 'assets/images/pause_icon.png'),
-                  color: (appProvider.isDark())
-                      ? theme.colorScheme.onSecondary
-                      : theme.colorScheme.primary,
-                  size: 30,
-                ),
-              ),
-            ),
-            Expanded(
-              child: GestureDetector(
-                onTap: () {},
-                child: ImageIcon(
-                  AssetImage((appProvider.currentLocal == 'en')
-                      ? 'assets/images/next_icon.png'
-                      : 'assets/images/previous_icon.png'),
-                  color: (ApplicationTheme.isDark)
-                      ? theme.colorScheme.onSecondary
-                      : theme.colorScheme.primary,
-                ),
-              ),
-            ),
-          ],
+            );
+          },
         ),
       ],
     );
