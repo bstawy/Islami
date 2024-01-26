@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/module/hadeth/hadeth_details_view.dart';
+
+import 'hadeth_details_view.dart';
 
 class HadethView extends StatefulWidget {
   const HadethView({super.key});

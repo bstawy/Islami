@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:islami/core/provider/app_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/module/settings/widgets/selected_option_widget.dart';
-import 'package:islami/module/settings/widgets/unselected_option_widget.dart';
 import 'package:provider/provider.dart';
+
+import '../../../core/provider/app_provider.dart';
+import 'selected_option_widget.dart';
+import 'unselected_option_widget.dart';
 
 class ThemeBottomSheetWidget extends StatefulWidget {
   const ThemeBottomSheetWidget({super.key});
@@ -40,7 +41,6 @@ class _ThemeBottomSheetWidgetState extends State<ThemeBottomSheetWidget> {
             onTap: () {
               appProvider.changeTheme(ThemeMode.light);
               Navigator.pop(context);
-
             },
             child: appProvider.isDark()
                 ? UnselectedOption(
