@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/module/settings/widgets/language_bottom_sheet.dart';
-import 'package:islami/module/settings/widgets/settings_item.dart';
-import 'package:islami/module/settings/widgets/theme_bottom_sheet.dart';
 import 'package:provider/provider.dart';
+
 import '../../core/provider/app_provider.dart';
+import 'widgets/language_bottom_sheet.dart';
+import 'widgets/settings_item.dart';
+import 'widgets/theme_bottom_sheet.dart';
 
 class SettingsView extends StatefulWidget {
   const SettingsView({super.key});
@@ -15,7 +16,7 @@ class SettingsView extends StatefulWidget {
 
 class _SettingsViewState extends State<SettingsView> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     var locale = AppLocalizations.of(context)!;
     var appProvider = Provider.of<AppProvider>(context);
 
@@ -26,7 +27,9 @@ class _SettingsViewState extends State<SettingsView> {
         children: [
           SettingsItem(
               settingOptionTitle: locale.language,
-              selectedOption: (appProvider.currentLocal == 'en') ? locale.english : locale.arabic ,
+              selectedOption: (appProvider.currentLocal == 'en')
+                  ? locale.english
+                  : locale.arabic,
               onClicked: () {
                 showLanguageBottomSheet(context);
               }),
@@ -42,8 +45,8 @@ class _SettingsViewState extends State<SettingsView> {
       ),
     );
   }
-  void showLanguageBottomSheet(context) {
 
+  void showLanguageBottomSheet(context) {
     showModalBottomSheet(
       context: context,
       builder: (context) => const LanguageBottomSheetWidget(),
@@ -51,7 +54,6 @@ class _SettingsViewState extends State<SettingsView> {
   }
 
   void showThemeBottomSheet(context) {
-
     showModalBottomSheet(
       context: context,
       builder: (context) => const ThemeBottomSheetWidget(),

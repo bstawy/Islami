@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/module/quran/quran_view.dart';
 import 'package:provider/provider.dart';
+
 import '../core/provider/app_provider.dart';
 import '../module/hadeth/hadeth_view.dart';
+import '../module/quran/quran_view.dart';
 import '../module/radio/radio_view.dart';
 import '../module/settings/settings_view.dart';
 import '../module/tasbeh/tasbeh_view.dart';

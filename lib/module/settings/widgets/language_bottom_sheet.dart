@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/module/settings/widgets/selected_option_widget.dart';
-import 'package:islami/module/settings/widgets/unselected_option_widget.dart';
 import 'package:provider/provider.dart';
-import '../../../core/provider/app_provider.dart';
 
+import '../../../core/provider/app_provider.dart';
+import 'selected_option_widget.dart';
+import 'unselected_option_widget.dart';
 
 class LanguageBottomSheetWidget extends StatefulWidget {
   const LanguageBottomSheetWidget({super.key});
 
   @override
-  State<LanguageBottomSheetWidget> createState() => _LanguageBottomSheetWidgetState();
+  State<LanguageBottomSheetWidget> createState() =>
+      _LanguageBottomSheetWidgetState();
 }
 
 class _LanguageBottomSheetWidgetState extends State<LanguageBottomSheetWidget> {
@@ -31,25 +32,24 @@ class _LanguageBottomSheetWidgetState extends State<LanguageBottomSheetWidget> {
             },
             child: appProvider.currentLocal == 'en'
                 ? SelectedOption(
-              selectedOptionTitle: locale.english,
-            )
+                    selectedOptionTitle: locale.english,
+                  )
                 : UnselectedOption(
-              unselectedOptionTitle: locale.english,
-            ),
+                    unselectedOptionTitle: locale.english,
+                  ),
           ),
           GestureDetector(
             onTap: () {
               appProvider.changeLanguage('ar');
               Navigator.pop(context);
-
             },
             child: appProvider.currentLocal == 'en'
                 ? UnselectedOption(
-              unselectedOptionTitle: locale.arabic,
-            )
+                    unselectedOptionTitle: locale.arabic,
+                  )
                 : SelectedOption(
-              selectedOptionTitle: locale.arabic,
-            ),
+                    selectedOptionTitle: locale.arabic,
+                  ),
           ),
         ],
       ),

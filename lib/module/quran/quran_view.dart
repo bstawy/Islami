@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/module/quran/quran_details_view.dart';
-import 'package:islami/module/quran/widgets/quran_item.dart';
+
+import 'quran_details_view.dart';
+import 'widgets/quran_item.dart';
 
 class QuranView extends StatelessWidget {
   final List<String> suraNames = const [
@@ -133,8 +134,8 @@ class QuranView extends StatelessWidget {
       children: [
         Image.asset(
           'assets/images/quran_header.png',
-          width: mediaQuery.width/2,
-          height: mediaQuery.height/3.8,
+          width: mediaQuery.width / 2,
+          height: mediaQuery.height / 3.8,
           fit: BoxFit.cover,
         ),
         SizedBox(height: mediaQuery.height * 0.01),
