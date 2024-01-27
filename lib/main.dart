@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/core/provider/app_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'core/provider/app_provider.dart';
 import 'core/theme/application_theme.dart';
-import 'package:islami/layout/home_layout.dart';
-import 'package:islami/module/quran/quran_details_view.dart';
+import 'layout/home_layout.dart';
 import 'module/hadeth/hadeth_details_view.dart';
+import 'module/quran/quran_details_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,10 +23,8 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     var appProvider = Provider.of<AppProvider>(context);
 
     return MaterialApp(

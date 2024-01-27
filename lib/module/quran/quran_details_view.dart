@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islami/module/quran/quran_view.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
+
 import '../../core/provider/app_provider.dart';
+import 'quran_view.dart';
 
 class QuranDetailsView extends StatefulWidget {
   static const String routeName = 'quran-details-view';
