@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
@@ -16,6 +17,8 @@ class RadioView extends StatefulWidget {
 }
 
 class _RadioViewState extends State<RadioView> {
+  final player = AudioPlayer();
+
   Future<RadiosResponse> getRadios(String currentLanguage) async {
     currentLanguage = (currentLanguage == 'en') ? 'eng' : 'ar';
     var uri = Uri.parse(
@@ -53,6 +56,7 @@ class _RadioViewState extends State<RadioView> {
                   itemBuilder: (context, index) {
                     return RadioItem(
                       radioStation: snapshot.data!.radios![index],
+                      player: player,
                     );
                   },
                 ),
