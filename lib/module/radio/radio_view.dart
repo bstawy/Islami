@@ -64,7 +64,7 @@ class _RadioViewState extends State<RadioView> {
             } else if (snapshot.hasError) {
               return Center(
                 child: Text(
-                  "No internet connection",
+                  "Check internet connections",
                   style: theme.textTheme.titleLarge,
                 ),
               );
