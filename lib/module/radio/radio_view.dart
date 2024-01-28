@@ -62,7 +62,12 @@ class _RadioViewState extends State<RadioView> {
                 ),
               );
             } else if (snapshot.hasError) {
-              return Text('${snapshot.error}');
+              return Center(
+                child: Text(
+                  "No internet connection",
+                  style: theme.textTheme.titleLarge,
+                ),
+              );
             }
             return Center(
               child: CircularProgressIndicator(
